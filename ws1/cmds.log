@@ -1,0 +1,13 @@
+    1  ls
+    2  mkdir sjsu
+    3  ls
+    4  cd sjsu
+    5  wget www.github.com
+    6  ls
+    7  git status
+    8  git init
+    9  git status
+   10  mkdir ws1
+   11  ls
+   12  cd ws1
+   13  history > cmds.log
