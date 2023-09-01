@@ -1,0 +1,20 @@
+  252  mkdir ws2
+  253  ls
+  254  cd ws2
+  255  ls
+  257  cp /datasets/taxidata.tar.gz .
+  258  ls
+  260  tar zxvf taxidata.tar.gz 
+  261  ls
+  262  cd taxidata
+  263  ls
+  290  grep --help
+  291  man grep
+  302  grep '","2019-03-12' 2019-03.csv > test.txt
+  303  tail -n 20 test.txt > results.txt
+  304  cat results.txt
+  305  wc test.txt >> results.txt
+  306  cat results.txt
+  310  ls
+  311  cd ws2
+  312  history > cmds.log
