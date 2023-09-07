@@ -1,0 +1,64 @@
+  330  start of a1
+ ==========Q1=============
+  333  mkdir a1
+  334  ls
+  335  cd a1
+  336  ls
+ ==========Q2=============
+  347  echo $HOME
+  348  echo $HOME > a1.txt
+ ==========Q3=============
+  350  echo $UID
+  351  echo $UID >> a1.txt
+  403  echo $(groups)
+  404  echo $(groups) >> a1.txt
+  409  echo $(groups),$UID >> a1.txt
+ ==========Q4============= 
+  353  mkdir temp
+  358  man chmod
+  359  chmod -x temp
+  362  cd temp
+  363  ls temp  - is empty
+  364  ls -l temp - total 0 
+  369  ls -l temp >> a1.txt
+ ==========Q5=============
+  371  mkdir temp2
+  373  mv temp2 temp3 - this deletes temp2 and makes temp3
+  422  cp temp3
+  423  man cp
+  424  mkdir temp4
+  425  ls
+  426  cp temp3 temp4
+  427  cp -r temp3 temp4
+  428  ls
+  429  ls temp4
+  430  ls temp4 >> a1.txt
+ ==========Q6============
+  433  cd
+  435  ls /proc
+  436  cd /proc
+  437  ls
+  438  grep mem
+  439  ls | grep mem
+  440  meminfo - contains mem info
+  441  cat meminfo
+  463  ls | grep cpu
+  464  cpuinfo - contains cpu info
+ ===========Q7===========
+  465  cat cpuinfo 
+  468  cat meminfo
+  469  head meminfo - total : 73080512 kB
+ ===========Q8===========
+  470  head cpuinfo - processor: power 8/ 3425MHz / 3.4GH
+  471  tail cpuinfo
+ ===========Q9===========
+  495  cd
+  496  cd /etc
+  497  ls | grep os
+  500  head os-release
+ ===========Q10==========
+  501  ls -l os-release  - permision: lrwxrwxrwx
+ ========================
+  505  cd a1
+  506  ls
+  507  history > cmds.log

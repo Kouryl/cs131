@@ -1,0 +1,9 @@
+2) /mnt/scratch/alan23fa - home directory
+3) alan23fa,1032 - UID and group
+4) total 0 ls -l for temp
+5) temp3    - a copy inside of temp4 after cp -r temp3 temp4
+7) 73080512 kB
+8) processor: power8
+   clock:     3425 MHz
+9) os-release
+10) lrwxrwxrwx
