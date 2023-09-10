@@ -1,0 +1,23 @@
+  690  ls
+  691  cut -d "," -f 8 2019-01.csv > jan.txt
+  692  tail jan.txt
+  693  man sort
+  694  sort -n jan.txt > sjan.txt
+  695  tail sjan.txt
+  696  man uniq
+  697  uniq -c sjan.txt >ujan.txt
+  698  tail ujan.txt
+  699  sort -n ujan.txt > janSorted.txt
+  700  tail janSorted.txt
+  701  tail -n 3 janSorted.txt
+  702  tail -n 3 janSorted.txt > ws3.txt
+  703  cat ws3.txt
+  704  cut -d "," -f 8 2019-02.csv > feb.txt
+  705  sort -n feb.txt > sfeb.txt
+  706  uniq -c sfeb.txt > ufeb.txt
+  707  sort -n ufeb.txt > febSorted.txt
+  708  tail febSorted.txt
+  712  tail -n 3 febSorted.txt >> ws3.txt
+  713  cat ws3.txt
+  714  ls
+  735  history > cmds.log
