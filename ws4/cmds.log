@@ -1,0 +1,31 @@
+  841  mkdir ws4
+  842  cd
+  843  vi ~/.bashrc
+  848  source ~/.bashrc
+  849  l
+  850  w
+  851  script ws4.txt
+  852  ls
+  853  cat ws4.txt
+  860  cd taxidata
+  861  ls
+  881  mkdir FARE
+  882  ls
+  887  head 2019-06.csv
+  892  cut -f8,9,11 -d, 2019-06.csv | sort -n > jun.txt
+  895  tail jun.txt
+  908  grep -e '^48.0,161.0,' jun.txt > 48.0-161.0.txt
+  924  grep -e '^49.0,130.0,' jun.txt > 49.0-130.0.txt
+  932  ls
+  935  cd sjsu/ws4/FARE
+  936  ls
+  953  cut -f3 -d, 48.0-161.0.txt > res.txt
+  954  cat res.txt > 48.0-161.0.txt
+  957  cut -f3 -d, 49.0-130.0.txt > res.txt
+  959  cat res.txt > 49.0-130.0.txt
+  960  cat 49.0-130.0.txt
+  962  rm res.txt
+  977  awk '{s+=$1}END{print "avg:",s/NR}' 48.0-161.0.txt >> ws4.txt
+  978  awk '{s+=$1}END{print "avg:",s/NR}' 49.0-130.0.txt >> ws4.txt
+  979  cat ws4.txt
+  984  history > cmds.log

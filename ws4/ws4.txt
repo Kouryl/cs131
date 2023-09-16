@@ -1,0 +1,15 @@
+Script started on 2023-09-13 17:32:17-04:00
+bash-4.4$ l   -  calling alias l
+total 8
+drwxrwxr-x 5 alan23fa alan23fa 4096 Sep 10 01:59 class
+drwxrwxr-x 8 alan23fa alan23fa 4096 Sep 13 17:30 sjsu
+-rw-rw-r-- 1 alan23fa alan23fa    0 Sep 13 17:32 ws4.txt
+bash-4.4$ w     -  calling alias w
+      4      29     174
+bash-4.4$ exit
+
+Script done on 2023-09-13 17:32:36-04:00
+
+avg: 7.82063   -  for 48.0-161.0.txt
+
+avg: 38.3      -  for 49.0-130.0.txt
