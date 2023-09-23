@@ -1,0 +1,41 @@
+    8  mkdir a2
+    9  ls
+   11  cd class/taxidata
+   12  ls
+   13  head 2019-05.csv
+   14  cut -f2,17 -d, 2019-05.csv > may.txt
+   17  grep -e "2019-05-11" may.txt > newmay.txt
+   19  cut -f2 -d, newmay.txt > may_total.txt
+   20  cat may_total.txt | paste -s -d+ | bc > mayavg-result.txt
+   31  wc -l < may_total.txt >> mayavg-result.txt
+   34  cat mayavg-result.txt | paste -s -d/ | bc -l >> a2.txt
+   39  cat may_total.txt | sort -nr | head -n 1 >> a2.txt
+   43  cut -f4,9 -d, 2019-05.csv > threeormore.txt
+   55  grep -e '^[3-9]' threeormore.txt >3ormore.txt
+   56  head 3ormore.txt
+   58  sort -n 3ormore.txt | uniq -c | sort -nr > threeormore.txt
+   60  head -n 10 threeormore.txt >> a2.txt
+   61  cat a2.txt
+   66  cut -f2,8,9 -d, 2019-05.csv > may.txt
+   69  grep -e "2019-05-20" may.txt > may20.txt
+   80  cut -f2 -d, may20.txt | uniq -c | sort -n
+   81  head may20.txt
+   83  grep -e '^260.0,' may20.txt 
+   84  cut -f2,3 -d, may20.txt | grep -e '^260.0,' > may20res.txt 
+   85  head may20res.txt
+   88  sort -n may20res.txt | uniq -c | sort -nr | head -n 1 > a2.txt
+  103  cat mayavg-result.txt | paste -s -d/ | bc -l > a2.txt
+  104  cat a2.txt
+  105  ls
+  106  head may_total.txt
+  108  sort -nr may_total.txt | head -n 1 >> a2.txt
+  113  head -n 1 threeormore.txt >> a2.txt
+  115  sort -n may20res.txt | uniq -c | sort -nr | head -n 1 >> a2.txt
+  126  for i in {1..12}; do cut -f8 -d, 2019-0$i.csv | sort -n | uniq -c | sort -nr | head -n 1 >> a2.txt; done
+  127  cat a2.txt
+  128  for i in {10..12}; do cut -f8 -d, 2019-$i.csv | sort -n | uniq -c | sort -nr | head -n 1 >> a2.txt; done
+  130  vi a2.txt
+  137  mv a2.txt ../a2
+  139  cd ../a2
+  140  ls
+  141  history > cmds.log
