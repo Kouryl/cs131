@@ -1,0 +1,46 @@
+    5  cd ws5
+    6  ls
+    7  cd do234
+   11  cd
+   12  cd class/taxidata
+   13  head 2019-08.csv
+   14  cut -f8,9 -d, 2019-08.csv > aug.txt
+   15  head aug.txt
+   17  grep -e '234.0,' aug.txt > 234.0.txt
+   18  mv 234.0.txt ../../sjsu/ws5/do234
+   20  ls
+   23  head 234.0.txt
+   24  sort -n 234.0.txt | uniq -c | sort -nr | head -n 100 > top234.0.txt
+   25  head top234.0.txt
+   27  grep -e ',1.0' top234.0.txt
+   29  awk '{print $2}' top234.0.txt > top100doloc.txt
+   33  cut -f2 -d, top100doloc.txt > doloc.txt
+   34  ls
+  111  cd
+  112  cd class/taxidata
+  113  ls
+  117  grep -e '234.0,' aug.txt >top100poloc.txt
+  118  mv top100poloc.txt ../../sjsu/ws5/do234
+  119  cd
+  120  cd sjsu/ws5/do234
+  200  for i in $(cat doloc.txt); do grep -e ,$i top100poloc.txt > "$i".txt; done
+  201  for i in {1..1}; do grep -e ,1\\. top100poloc.txt > 1.0.txt; done
+  203  head 1.0.txt
+  206  wc -l 1.0.txt > ws5.txt
+  210  wc -l 3.0.txt >> ws5.txt
+  213  wc -l 48.0.txt >> ws5.txt
+  214  wc -l 223.0.txt >> ws5.txt
+  215  cat ws5.txt
+  216  ls 
+  217  mv ws5.txt ../
+  218  mkdir pdloc
+  221  mv top234.0.txt pdloc
+  223  mv test.txt pdloc
+  224  mv doloc.txt pdloc
+  225  mv top100doloc.txt pdloc
+  227  mv top100poloc.txt pdloc
+  230  mv pdloc ../
+  238  ls
+  239  cd ../
+  240  ls
+  249  history > cmds.log
