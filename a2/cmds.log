@@ -39,3 +39,27 @@
   139  cd ../a2
   140  ls
   141  history > cmds.log
+
+
+===============  redoing q4 ============
+cut -f2,8,9 -d, 2019-05.csv > popmay.txt
+  282  head popmay
+  283  head popmay.txt
+  284  grep -e "2019-05-20" popmay.txt
+  285  grep -e "2019-05-20" popmay.txt | cut -f2 > maypickup.txt
+  286  head maypickup
+  287* cut -f2 -d
+  288  grep -e "2019-05-20" popmay.txt | cut -f2 -d > maypickup.txt
+  289  grep -e "2019-05-20" popmay.txt | cut -f2 -d, > maypickup.txt
+  290  head maypickup.txt
+  291  sort -n maypickup.txt | uniq -c | sort -nr | head -n 3
+  292  head popmay.txt
+  293  cut -f2,3 -d popmay.txt > 4.txt
+  294  cut -f2,3 -d, popmay.txt > 4.txt
+  295  head 4.txt
+  296  grep "237.0,
+  297  grep "237.0," 4.txt
+  298  grep "237.0," 4.txt > 4pop.txt
+  299  head 4pop.txt
+  300  sort -n 4pop.txt | uniq -c | sort -nr | head -n 3
+
