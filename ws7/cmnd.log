@@ -1,0 +1,10 @@
+  546  cd sjsu
+  548  mkdir ws7
+  554  less 2019-12.csv 
+  564  awk -F, '$17 >= 10 { tip[$14]++ } END { for (i in tip) print i, tip[i] }' 2019-12.csv > results.txt
+  565  less results.txt
+  569  sort -k2 -nr results.txt | head -n 20 > ws7.txt
+  570  cat ws7.txt
+  572  mv results.txt ../../sjsu/ws7
+  573  mv ws7.txt ../../sjsu/ws7
+  581  history > cmnd.log
