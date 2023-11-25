@@ -6,5 +6,5 @@ set ylabel "debt status"
 set title "Debt"
 set term png
 set out "debt.png"
-plot "ydebt.dat" using 1 with boxes ls 1 title "in debt", \
-     "ndebt.dat" using 1 with boxes ls 2 title "not in debt"
+plot "ydebt.dat" using 1:xtic(1) with boxes ls 1 title "in debt", \
+     "ndebt.dat" using 1:xtic(1.5) with boxes ls 2 title "not in debt"
