@@ -1,4 +1,4 @@
-set term svg size 1200,800
+set term svg size 1000,1000
 set boxwidth 1.0 relative
 set style histogram
 set datafile separator ','
