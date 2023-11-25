@@ -7,4 +7,4 @@ set title "Debt"
 set terminal pngcairo
 set out 'debt.png'
 plot "ydebt.dat" using 1:xtic(1) with boxes title "in debt" lc rgb "red", \
-     "ndebt.dat" using 1 with boxes title "not in debt" lc rgb "blue"
+     "ndebt.dat" using 1:xtic(2) with boxes title "not in debt" lc rgb "blue"
