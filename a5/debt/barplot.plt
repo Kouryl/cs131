@@ -10,5 +10,5 @@ set grid ytics
 set xtics format ""
 set term png
 set out "debt.png"
-plot "ydebt.dat" using 1:xtic(1) title "in debt" lc rgb "red", \
-     "ndebt.dat" using 1 title "not in debt" lc rgb "blue"
+plot "ydebt.dat" using 1:xtic(1) with boxes title "in debt" lc rgb "red", \
+     "ndebt.dat" using 1 with boxes title "not in debt" lc rgb "blue"
