@@ -5,7 +5,6 @@ set datafile separator ','
 set xlabel "enrollment status"
 set ylabel "debt status"
 set title "Debt"
-set grid ytics
 set term png
 set out "debt.png"
 plot "ydebt.dat" using 1:xtic(1) with boxes title "in debt" lc rgb "red", \
