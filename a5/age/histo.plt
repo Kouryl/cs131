@@ -1,7 +1,8 @@
+
 set boxwidth 1.0 relative
 set style histogram
 set datafile separator ','
-set term svg
+set term svg dynamic size 500,1500
 set out "age.svg"
 set style fill solid 1.0
 set title "dropout and age"
