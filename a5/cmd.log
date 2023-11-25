@@ -1,0 +1,24 @@
+ 1002  cut -d, -f1,3 project.csv debt.csv
+ 1005  cut -d, -f2,3 project.csv > tuition.csv
+ 1031  grep "1,D" tuition.csv > tuition1.csv
+ 1032  grep "0,D" tuition.csv > tuition0.csv
+ 1048  vim barplot.plt
+ 1074  ls
+ 1075  grep "1," debt.csv > ydebt.csv
+ 1078  grep "0," debt.csv > ndebt.csv
+ 1100  awk -F, 'NR>1 {arr[$2]++} END { for (i in arr) print arr[i], i}' ndebt.csv > ndebt.dat
+ 1102  awk -F, 'NR>1 {arr[$2]++} END { for (i in arr) print arr[i], i}' ydebt.csv > ydebt.dat
+ 1111  awk -F, 'NR>1 {arr[$2]++} END { for (i in arr) print arr[i], i}' tuition0.csv > ntuition.dat
+ 1112  awk -F, 'NR>1 {arr[$2]++} END { for (i in arr) print arr[i], i}' tuition1.csv > ytuition.dat
+ 1517  cd project
+ 1519  less data.csv
+ 1524  cut -f20,37 -d, data.csv > age.csv
+ 1525  mv age.csv ../sjsu/a5
+ 1528  cd sjsu/a5
+ 1551  grep ",D" age.csv > DO
+ 1563  awk -F, '{ age[$1]++ } END { for (i in age) print i"," age[i]}' DO > age.dat
+ 1669  git status
+ 1670  git commit -m 'a5'
+ 1671  git push -u origin main
+ 1672  ls
+ 1673  history > cmd.log
